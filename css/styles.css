@@ -133,6 +133,7 @@ img {
 
 .btn-primary:hover {
     background-color: #444;
+    color: #25D366;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -145,7 +146,7 @@ img {
 
 .btn-secondary:hover {
     background-color: #2d2d2d;
-    color: #fff;
+    color: #25D366;
     transform: translateY(-3px);
 }
 
@@ -223,7 +224,10 @@ img {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #2d2d2d;
+    background: linear-gradient(90deg, #25D366, #2d2d2d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     transition: transform 0.3s ease;
 }
 
@@ -255,7 +259,7 @@ img {
 }
 
 .nav a:hover {
-    color: #2d2d2d;
+    color: #25D366;
 }
 
 .nav a:hover::after {

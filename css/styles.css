@@ -25,7 +25,7 @@ a {
 img {
     max-width: 100%;
     height: auto;
-    display: block;
+    display: inline-block;
 }
 
 .container {
@@ -227,9 +227,6 @@ img {
     color: #1a1a1a;
     background-clip: text;
     transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .logo:hover {
@@ -238,6 +235,15 @@ img {
 
 .logo-img {
     width: 90px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-name {
+    display: none;
 }
 
 .nav {
@@ -264,7 +270,7 @@ img {
 }
 
 .nav a:hover {
-    color: #25D366;
+    color: #0081C3;
 }
 
 .nav a:hover::after {
@@ -941,6 +947,27 @@ img {
 
     .btn {
         width: 100%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        width: 60px;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-name {
+        display: block;
+    }
+
+    .desktop-name {
+        display: none;
     }
 
     .whatsapp-float {

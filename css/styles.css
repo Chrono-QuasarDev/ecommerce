@@ -680,13 +680,59 @@ img {
 }
 
 /* ==================== */
-/* Gallery Section */
+/* Gallery Section      */
 /* ==================== */
 .gallery {
     padding: 100px 0;
     background-color: #f5f7fa;
 }
 
+/* ---- Tabs ---- */
+.gallery-tabs-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-bottom: 36px;
+}
+
+.gallery-tabs-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-tabs {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0 4px;
+}
+
+.gallery-tab {
+    padding: 9px 20px;
+    border-radius: 100px;
+    border: 1.5px solid #ddd;
+    background-color: #fff;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+
+.gallery-tab:hover {
+    border-color: #25D366;
+    color: #25D366;
+}
+
+.gallery-tab.active {
+    background-color: #2d2d2d;
+    border-color: #2d2d2d;
+    color: #fff;
+}
+
+/* ---- Grid ---- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -699,6 +745,7 @@ img {
     aspect-ratio: 1;
     cursor: pointer;
     position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .gallery-item img {
@@ -709,9 +756,65 @@ img {
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
+/* ---- Overlay ---- */
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 55%);
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 14px 16px;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-cat-label {
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.gallery-icon {
+    color: #fff;
+}
+
+/* ---- Empty state ---- */
+.gallery-empty {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 0.95rem;
+    border: 2px dashed #ddd;
+    border-radius: 15px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-tabs {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
 /* ==================== */
 /* How It Works Section */
 /* ==================== */

@@ -65,109 +65,45 @@ animateOnScrollElements.forEach(element => {
     observer.observe(element);
 });
 
-// ==================== 
-// Lightbox
-// ==================== 
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightboxImage');
-const lightboxClose = document.getElementById('lightboxClose');
-const lightboxPrev = document.getElementById('lightboxPrev');
-const lightboxNext = document.getElementById('lightboxNext');
-const lightboxCounter = document.getElementById('lightboxCounter');
-const galleryItems = document.querySelectorAll('.gallery-item img');
+// ====================
+// Gallery Filter Tabs
+// ====================
+const galleryTabs = document.querySelectorAll('.gallery-tab');
+const galleryItems = document.querySelectorAll('.gallery-item');  // replaces old const
+const galleryEmpty = document.getElementById('galleryEmpty');
 
-let currentIndex = 0;
-const images = [];
+galleryTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Update active tab
+        galleryTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
 
-// Collect all gallery images
-galleryItems.forEach((img, index) => {
-    images.push(img.src);
-    img.addEventListener('click', () => {
-        openLightbox(index);
+        const filter = tab.dataset.filter;
+        let visibleCount = 0;
+
+        galleryItems.forEach(item => {
+            const match = filter === 'all' || item.dataset.category === filter;
+
+            if (match) {
+                item.style.display = '';
+                requestAnimationFrame(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                });
+                visibleCount++;
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    if (item.style.opacity === '0') item.style.display = 'none';
+                }, 280);
+            }
+        });
+
+        // Show empty state if no images in this category
+        galleryEmpty.style.display = visibleCount === 0 ? 'block' : 'none';
     });
 });
-
-function openLightbox(index) {
-    currentIndex = index;
-    updateLightboxImage();
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-function updateLightboxImage() {
-    lightboxImage.src = images[currentIndex];
-    lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
-}
-
-function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateLightboxImage();
-}
-
-function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateLightboxImage();
-}
-
-// Lightbox Event Listeners
-lightboxClose.addEventListener('click', closeLightbox);
-lightboxNext.addEventListener('click', nextImage);
-lightboxPrev.addEventListener('click', prevImage);
-
-// Close on background click
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        closeLightbox();
-    }
-});
-
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('active')) return;
-
-    switch (e.key) {
-        case 'Escape':
-            closeLightbox();
-            break;
-        case 'ArrowRight':
-            nextImage();
-            break;
-        case 'ArrowLeft':
-            prevImage();
-            break;
-    }
-});
-
-// Touch/Swipe support for lightbox
-let touchStartX = 0;
-let touchEndX = 0;
-
-lightbox.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-}, false);
-
-lightbox.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-}, false);
-
-function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-
-    if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-            nextImage();
-        } else {
-            prevImage();
-        }
-    }
-}
 
 // ==================== 
 // Smooth Scroll for Navigation Links

@@ -181,7 +181,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
+    <!-- <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Our Work</h2>
             <p class="section-subtitle animate-on-scroll">Some of our recent custom creations</p>
@@ -265,6 +265,125 @@
                         </span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Our Work</h2>
+            <p class="section-subtitle animate-on-scroll">Tap a category to explore what we make</p>
+
+            <!-- Filter Tabs -->
+            <div class="gallery-tabs-wrapper">
+                <div class="gallery-tabs">
+                    <button class="gallery-tab active" data-filter="all">All</button>
+                    <button class="gallery-tab" data-filter="t-shirts">T-Shirts</button>
+                    <button class="gallery-tab" data-filter="hoodies">Hoodies</button>
+                    <button class="gallery-tab" data-filter="trousers">Trousers</button>
+                    <button class="gallery-tab" data-filter="stickers">Stickers</button>
+                    <button class="gallery-tab" data-filter="caps">Caps & Hats</button>
+                    <button class="gallery-tab" data-filter="frameworks">Frameworks</button>
+                    <button class="gallery-tab" data-filter="mugs">Mugs & Bottles</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <!-- 
+                To add a new image: copy a .gallery-item block and set 
+                data-category to one of: t-shirts | hoodies | trousers | 
+                stickers | caps | frameworks | mugs
+            -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/work-1.webp" alt="Custom T-Shirt">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">T-Shirt</span>
+                        <span class="gallery-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <path d="M11 8v6"></path><path d="M8 11h6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hoodies">
+                    <img src="images/work-2.webp" alt="Custom Hoodie">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Hoodie</span>
+                        <span class="gallery-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <path d="M11 8v6"></path><path d="M8 11h6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="stickers">
+                    <img src="images/work-3.webp" alt="Custom Stickers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Stickers</span>
+                        <span class="gallery-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <path d="M11 8v6"></path><path d="M8 11h6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="caps">
+                    <img src="images/work-4.webp" alt="Custom Cap">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Cap & Hat</span>
+                        <span class="gallery-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <path d="M11 8v6"></path><path d="M8 11h6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/work-5.webp" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                        <span class="gallery-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <path d="M11 8v6"></path><path d="M8 11h6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="mugs">
+                    <img src="images/work-6.webp" alt="Custom Mug">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Mug & Bottle</span>
+                        <span class="gallery-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                                <path d="M11 8v6"></path><path d="M8 11h6"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty state (shown when a category has no images yet) -->
+            <div class="gallery-empty" id="galleryEmpty">
+                <p>No photos yet for this category — check back soon!</p>
             </div>
         </div>
     </section>

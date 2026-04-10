@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
@@ -26,6 +26,10 @@ img {
     max-width: 100%;
     height: auto;
     display: inline-block;
+}
+
+h1, h2, h3 {
+    font-family: "Google Sans Flex", sans-serif;
 }
 
 .container {
@@ -99,7 +103,7 @@ img {
     gap: 10px;
     padding: 14px 28px;
     border-radius: 8px;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -241,6 +245,7 @@ img {
 .logo-container {
     display: flex;
     align-items: center;
+    font-family: "Google Sans Flex", sans-serif;
 }
 
 .mobile-name {
@@ -376,6 +381,7 @@ img {
 }
 
 .hero-content h1 {
+    font-family: "Google Sans Flex", sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
     color: #2d2d2d;
@@ -429,7 +435,7 @@ img {
     border: 1.5px solid rgba(37, 211, 102, 0.35);
     border-radius: 100px;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: bold;
     color: #2d2d2d;
     margin-bottom: 20px;
     backdrop-filter: blur(6px);

@@ -35,7 +35,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -112,6 +112,33 @@
         </div>
     </section>
 
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Orders Completed</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">70+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">24–48hrs</span>
+                    <span class="stat-label">Turnaround Time</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Products Available</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
@@ -157,87 +184,245 @@
     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Our Work</h2>
-            <p class="section-subtitle animate-on-scroll">Some of our recent custom creations</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item animate-on-scroll" data-delay="0">
-                    <img src="images/work-1.webp" alt="Custom work sample" data-index="0">
+            <p class="section-subtitle animate-on-scroll">Tap a category to explore what we make</p>
+
+            <!-- Filter Tabs -->
+            <div class="gallery-tabs-wrapper">
+                <div class="gallery-tabs">
+                    <button class="gallery-tab active" data-filter="all">All</button>
+                    <button class="gallery-tab" data-filter="t-shirts">T-Shirts</button>
+                    <button class="gallery-tab" data-filter="hoodies">Hoodies</button>
+                    <button class="gallery-tab" data-filter="trousers">Trousers</button>
+                    <button class="gallery-tab" data-filter="stickers">Stickers</button>
+                    <button class="gallery-tab" data-filter="caps">Caps & Hats</button>
+                    <button class="gallery-tab" data-filter="frameworks">Frameworks</button>
+                    <button class="gallery-tab" data-filter="mugs">Mugs & Bottles</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <!-- 
+                To add a new image: copy a .gallery-item block and set 
+                data-category to one of: t-shirts | hoodies | trousers | 
+                stickers | caps | frameworks | mugs
+            -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-1.jpeg" alt="Custom T-Shirt">
                     <div class="gallery-overlay">
-                        <span class="gallery-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                                <path d="M11 8v6"></path>
-                                <path d="M8 11h6"></path>
-                            </svg>
-                        </span>
+                        <span class="gallery-cat-label">T-Shirt</span>
                     </div>
                 </div>
-                <div class="gallery-item animate-on-scroll" data-delay="100">
-                    <img src="images/work-2.webp" alt="Custom work sample" data-index="1">
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-2.jpeg" alt="Custom T-Shirt">
                     <div class="gallery-overlay">
-                        <span class="gallery-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                                <path d="M11 8v6"></path>
-                                <path d="M8 11h6"></path>
-                            </svg>
-                        </span>
+                        <span class="gallery-cat-label">T-Shirt</span>
                     </div>
                 </div>
-                <div class="gallery-item animate-on-scroll" data-delay="200">
-                    <img src="images/work-3.webp" alt="Custom work sample" data-index="2">
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-3.jpeg" alt="Custom T-Shirt">
                     <div class="gallery-overlay">
-                        <span class="gallery-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                                <path d="M11 8v6"></path>
-                                <path d="M8 11h6"></path>
-                            </svg>
-                        </span>
+                        <span class="gallery-cat-label">T-Shirt</span>
                     </div>
                 </div>
-                <div class="gallery-item animate-on-scroll" data-delay="300">
-                    <img src="images/work-4.webp" alt="Custom work sample" data-index="3">
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-4.jpeg" alt="Custom T-Shirt">
                     <div class="gallery-overlay">
-                        <span class="gallery-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                                <path d="M11 8v6"></path>
-                                <path d="M8 11h6"></path>
-                            </svg>
-                        </span>
+                        <span class="gallery-cat-label">T-Shirt</span>
                     </div>
                 </div>
-                <div class="gallery-item animate-on-scroll" data-delay="400">
-                    <img src="images/work-5.webp" alt="Custom work sample" data-index="4">
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-5.jpeg" alt="Custom T-Shirt">
                     <div class="gallery-overlay">
-                        <span class="gallery-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                                <path d="M11 8v6"></path>
-                                <path d="M8 11h6"></path>
-                            </svg>
-                        </span>
+                        <span class="gallery-cat-label">T-Shirt</span>
                     </div>
                 </div>
-                <div class="gallery-item animate-on-scroll" data-delay="500">
-                    <img src="images/work-6.webp" alt="Custom work sample" data-index="5">
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-6.jpeg" alt="Custom T-Shirt">
                     <div class="gallery-overlay">
-                        <span class="gallery-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.35-4.35"></path>
-                                <path d="M11 8v6"></path>
-                                <path d="M8 11h6"></path>
-                            </svg>
-                        </span>
+                        <span class="gallery-cat-label">T-Shirt</span>
                     </div>
                 </div>
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-7.jpeg" alt="Custom T-Shirt">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">T-Shirt</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-8.jpeg" alt="Custom T-Shirt">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">T-Shirt</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-9.jpeg" alt="Custom T-Shirt">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">T-Shirt</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-10.jpeg" alt="Custom T-Shirt">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">T-Shirt</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="t-shirts">
+                    <img src="images/shirt-11.jpeg" alt="Custom T-Shirt">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">T-Shirt</span>
+                    </div>
+                </div>
+
+                <!-- HOODIES -->
+                <div class="gallery-item" data-category="hoodies">
+                    <img src="images/hoodies/hoodie-1.jpeg" alt="Custom Hoodie">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Hoodie</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hoodies">
+                    <img src="images/hoodies/hoodie-2.jpeg" alt="Custom Hoodie">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Hoodie</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hoodies">
+                    <img src="images/hoodies/hoodie-3.jpeg" alt="Custom Hoodie">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Hoodie</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hoodies">
+                    <img src="images/hoodies/hoodie-4.jpeg" alt="Custom Hoodie">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Hoodie</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="hoodies">
+                    <img src="images/hoodies/hoodie-5.jpeg" alt="Custom Hoodie">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Hoodie</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/work-1.webp" alt="Custom T-Shirt">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/work-2.webp" alt="Custom Hoodie">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="stickers">
+                    <img src="images/work-3.webp" alt="Custom Stickers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Stickers</span>
+                    </div>
+                </div>
+
+                <!-- TROUSERS -->
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/trousers/trouser-1.jpeg" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/trousers/trouser-2.jpeg" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/trousers/trouser-3.jpeg" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/trousers/trouser-4.jpeg" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/trousers/trouser-5.jpeg" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/trousers/trouser-6.jpeg" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/trousers/trouser-7.jpeg" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/trousers/trouser-8.jpeg" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="caps">
+                    <img src="images/work-4.webp" alt="Custom Cap">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Cap & Hat</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="trousers">
+                    <img src="images/work-5.webp" alt="Custom Trousers">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Trousers</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="mugs">
+                    <img src="images/work-6.webp" alt="Custom Mug">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat-label">Mug & Bottle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty state (shown when a category has no images yet) -->
+            <div class="gallery-empty" id="galleryEmpty">
+                <p>No photos yet for this category — check back soon!</p>
             </div>
         </div>
     </section>
@@ -250,25 +435,55 @@
             
             <div class="steps">
                 <div class="step animate-on-scroll" data-delay="0">
-                    <div class="step-number">1</div>
+                    <div class="step-number">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </div>
+                    <span class="step-count">Step 01</span>
                     <h3>Message Us</h3>
                     <p>Send us your idea on WhatsApp</p>
                 </div>
+
                 <div class="step-line animate-on-scroll" data-delay="100"></div>
+
                 <div class="step animate-on-scroll" data-delay="200">
-                    <div class="step-number">2</div>
+                    <div class="step-number">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
+                    </div>
+                    <span class="step-count">Step 02</span>
                     <h3>We Design</h3>
                     <p>We create a mockup for your approval</p>
                 </div>
+
                 <div class="step-line animate-on-scroll" data-delay="300"></div>
+
                 <div class="step animate-on-scroll" data-delay="400">
-                    <div class="step-number">3</div>
+                    <div class="step-number">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                    </div>
+                    <span class="step-count">Step 03</span>
                     <h3>Pay & Create</h3>
                     <p>Once approved, we bring it to life</p>
                 </div>
+
                 <div class="step-line animate-on-scroll" data-delay="500"></div>
+
                 <div class="step animate-on-scroll" data-delay="600">
-                    <div class="step-number">4</div>
+                    <div class="step-number">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10"></path>
+                            <path d="M23 4H1v6h22V4z"></path>
+                            <line x1="12" y1="12" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <span class="step-count">Step 04</span>
                     <h3>Receive</h3>
                     <p>Get your custom product delivered</p>
                 </div>
@@ -279,26 +494,77 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
-            <p class="section-subtitle animate-on-scroll">Ready to create something awesome? Reach out to us</p>
-            
-            <div class="contact-buttons animate-on-scroll">
-                <a href="https://wa.me/+233503122296" class="btn btn-whatsapp" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    DM Us on WhatsApp
-                </a>
-                <a href="https://chat.whatsapp.com/DIZfOrVpwGT8vySYccaoVm?mode=gi_t" class="btn btn-whatsapp-outline" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    Join Our WhatsApp Group
-                </a>
-            </div>
-            
-            <div class="location animate-on-scroll">
-                <p>📍 Serving The Whole Of Accra</p>
+            <div class="contact-layout">
+
+                <!-- Left: CTA -->
+                <div class="contact-left animate-on-scroll">
+                    <h2 class="section-title" style="text-align:left;">Get In Touch</h2>
+                    <p class="section-subtitle" style="text-align:left; margin-bottom:32px;">
+                        Ready to create something awesome? Reach out to us — we'd love to hear your idea.
+                    </p>
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/+233503122296" class="btn btn-whatsapp" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            DM Us on WhatsApp
+                        </a>
+                        <a href="https://chat.whatsapp.com/DIZfOrVpwGT8vySYccaoVm?mode=gi_t" class="btn btn-whatsapp-outline" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Join Our WhatsApp Group
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Business Info -->
+                <div class="contact-info animate-on-scroll" data-delay="150">
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-info-label">Business Hours</p>
+                                <p class="contact-info-value">Mon – Sat, 8am – 8pm</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-divider"></div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-info-label">Response Time</p>
+                                <p class="contact-info-value">We reply instantly <span class="contact-live-dot"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-divider"></div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-info-label">Location</p>
+                                <p class="contact-info-value">Serving all of Accra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

@@ -239,7 +239,8 @@ h1, h2, h3 {
 }
 
 .logo-img {
-  width: 90px;
+  width: 50px;
+  margin-right: 0.5rem;
 }
 
 .logo-container {
